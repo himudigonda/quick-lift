@@ -10,3 +10,7 @@ class Lift:
 
     def getLiftLOC(self):
         return self.location
+
+    def setLiftLocation(self, _new_location):
+        self.location = _new_location
+        return self.getLiftLOC()
