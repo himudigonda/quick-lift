@@ -16,8 +16,10 @@ def main():
 
     while True:
         liftRequestedAt = clickAt()
-        deltaA = abs(liftA.location - liftRequestedAt)
-        deltaB = abs(liftB.location - liftRequestedAt)
+        liftALocation = liftA.getLiftLOC()
+        liftBLocation = liftB.getLiftLOC()
+        deltaA = abs(liftALocation - liftRequestedAt)
+        deltaB = abs(liftBLocation - liftRequestedAt)
         if deltaA <= deltaB:
             print("LiftA is on its way...")
         else:
